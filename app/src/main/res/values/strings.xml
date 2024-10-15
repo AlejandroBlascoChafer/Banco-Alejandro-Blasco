@@ -2,4 +2,7 @@
     <string name="app_name">T3A3-Blasco-Alejandro</string>
     <string name="usuario">Introduce el usuario</string>
     <string name="iniciar_sesion">Iniciar Sesión</string>
+    <string name="contrasenya">Introduce la contraseña</string>
+    <string name="btn_salir">Salir</string>
+    <string name="btn_entrar">Entrar</string>
 </resources>
