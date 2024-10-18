@@ -5,4 +5,6 @@
     <string name="contrasenya">Introduce la contraseña</string>
     <string name="btn_salir">Salir</string>
     <string name="btn_entrar">Entrar</string>
+    <string name="avatar">Icono de avatar</string>
+    <string name="bienvenida">Bienvenido/a</string>
 </resources>
