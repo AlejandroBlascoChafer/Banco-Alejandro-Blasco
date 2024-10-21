@@ -7,4 +7,6 @@
     <string name="btn_entrar">Entrar</string>
     <string name="avatar">Icono de avatar</string>
     <string name="bienvenida">Bienvenido/a</string>
+    <string name="obligatorio">Obligatorio</string>
+    <string name="bienvenido_a_mi_banco">Bienvenido/a a mi banco</string>
 </resources>

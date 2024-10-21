@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">T3A3-Blasco-Alejandro</string>
+    <string name="usuario">Insert the DNI</string>
+    <string name="iniciar_sesion">Sign In</string>
+    <string name="contrasenya">Insert the password</string>
+    <string name="btn_salir">Exit</string>
+    <string name="btn_entrar">Enter</string>
+    <string name="avatar">Icono de avatar</string>
+    <string name="bienvenida">Welcome</string>
+    <string name="obligatorio">Required</string>
+    <string name="bienvenido_a_mi_banco">Welcome to my bank</string>
+</resources>
