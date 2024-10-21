@@ -71,59 +71,97 @@
                     android:elevation="4dp">
 
 
-                    <LinearLayout
+                    <TableLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical">
+                        android:layout_height="match_parent">
 
-                        <com.google.android.material.button.MaterialButton
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="@string/posicion_global"
-                            android:layout_marginBottom="12dp"/>
-
-                        <com.google.android.material.button.MaterialButton
+                        <TableRow
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:text="@string/movimientos"
-                            android:layout_marginBottom="12dp"
-                            app:icon="@drawable/ic_movimientos"/>
+                            android:gravity="center"
+                            >
+                            <com.google.android.material.button.MaterialButton
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="@string/posicion_global"
+                                android:layout_marginBottom="6dp"
+                                android:layout_marginRight="6dp"
+                                />
 
-                        <com.google.android.material.button.MaterialButton
+                            <com.google.android.material.button.MaterialButton
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:text="@string/movimientos"
+                                android:layout_marginBottom="6dp"
+                                android:layout_marginRight="6dp"
+                                android:layout_weight="1"
+                                app:icon="@drawable/ic_movimientos"/>
+                        </TableRow>
+                        <TableRow
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:text="@string/transferencias"
-                            android:layout_marginBottom="12dp"
-                            app:icon="@drawable/ic_transferencias"/>
+                            android:gravity="center">
+                            <com.google.android.material.button.MaterialButton
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:text="@string/transferencias"
+                                android:layout_marginBottom="6dp"
+                                android:layout_marginRight="6dp"
+                                android:layout_weight="1"
+                                app:icon="@drawable/ic_transferencias"/>
 
-                        <com.google.android.material.button.MaterialButton
+                            <com.google.android.material.button.MaterialButton
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:text="@string/cambiar_contrasenya"
+                                android:layout_marginBottom="6dp"
+                                android:layout_marginRight="6dp"
+                                android:layout_weight="1"
+                                app:icon="@drawable/ic_cambiar_pass"/>
+                        </TableRow>
+
+                        <TableRow
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:text="@string/cambiar_contrasenya"
-                            android:layout_marginBottom="12dp"
-                            app:icon="@drawable/ic_cambiar_pass"/>
+                            android:gravity="center">
+                            <com.google.android.material.button.MaterialButton
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:text="@string/promociones"
+                                android:layout_marginBottom="6dp"
+                                android:layout_marginRight="6dp"
+                                android:layout_weight="1"
+                                app:icon="@drawable/ic_promociones"/>
 
-                        <com.google.android.material.button.MaterialButton
+                            <com.google.android.material.button.MaterialButton
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:text="@string/cajeros"
+                                android:layout_marginBottom="6dp"
+                                android:layout_marginRight="6dp"
+                                android:layout_weight="1"
+                                app:icon="@drawable/ic_cajeros"/>
+                        </TableRow>
+
+                        <TableRow
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:text="@string/promociones"
-                            android:layout_marginBottom="12dp"
-                            app:icon="@drawable/ic_promociones"/>
+                            android:gravity="center">
+                            <com.google.android.material.button.MaterialButton
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:text="@string/btn_salir"
+                                android:layout_marginBottom="6dp"
+                                android:layout_weight="1"
+                                app:icon="@drawable/ic_salir"/>
+                        </TableRow>
 
-                        <com.google.android.material.button.MaterialButton
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:text="@string/cajeros"
-                            android:layout_marginBottom="12dp"
-                            app:icon="@drawable/ic_cajeros"/>
+                    </TableLayout>
 
-                        <com.google.android.material.button.MaterialButton
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:text="@string/btn_salir"
-                            android:layout_marginBottom="12dp"
-                            app:icon="@drawable/ic_salir"/>
-                    </LinearLayout>
+
+
+
 
                 </androidx.cardview.widget.CardView>
 
@@ -150,8 +188,7 @@
                 android:backgroundTint="@color/morado"
                 app:fabCradleMargin="10dp"
                 app:fabCradleRoundedCornerRadius="20dp"
-                app:fabCradleVerticalOffset="10dp"
-                >
+                app:fabCradleVerticalOffset="10dp">
 
                 <ImageView
                     android:id="@+id/menuIcon"
@@ -162,13 +199,6 @@
                     android:layout_marginStart="16dp"
                     android:layout_marginBottom="12dp" />
             </com.google.android.material.bottomappbar.BottomAppBar>
-
-
-
-
-
-
-
-            </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
 
 

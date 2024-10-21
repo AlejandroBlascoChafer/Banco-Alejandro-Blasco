@@ -19,10 +19,10 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        // Obtenemos el texto enviado desde MainActivity
+
         val textoRecibido = intent.getStringExtra("DNI")
 
-        // Mostramos el texto recibido en un TextView
+
         binding.idTextView.text = textoRecibido
 
         enableEdgeToEdge()
