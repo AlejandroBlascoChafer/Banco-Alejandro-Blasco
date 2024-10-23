@@ -15,4 +15,7 @@
     <string name="cambiar_contrasenya">Change Password</string>
     <string name="promociones">Promotions</string>
     <string name="cajeros">ATMs</string>
+    <string name="cambiar">Change</string>
+    <string name="cancelar">Cancel</string>
+    <string name="repite_la_contrasenya">Repeat the password</string>
 </resources>

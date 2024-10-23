@@ -15,4 +15,7 @@
     <string name="cambiar_contrasenya">Cambiar Contraseña</string>
     <string name="promociones">Promociones</string>
     <string name="cajeros">Cajeros</string>
+    <string name="cambiar">Cambiar</string>
+    <string name="cancelar">Cancelar</string>
+    <string name="repite_la_contrasenya">Repite la contraseña</string>
 </resources>

@@ -1,5 +1,6 @@
 package com.example.t3a3_blasco_alejandro
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -24,6 +25,16 @@ class MainActivity : AppCompatActivity() {
 
 
         binding.idTextView.text = textoRecibido
+
+        binding.btnSalir.setOnClickListener{
+            val salir = Intent(this, LoginActivity::class.java)
+            startActivity(salir)
+        }
+
+        binding.btnCambiarContrasenya.setOnClickListener{
+            val cambiarContrasenya = Intent(this, ChangePasswordActivity::class.java)
+            startActivity(cambiarContrasenya)
+        }
 
         enableEdgeToEdge()
 

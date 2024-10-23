@@ -81,44 +81,51 @@
                             android:gravity="center"
                             >
                             <com.google.android.material.button.MaterialButton
+                                android:id="@+id/btnPosicionGlobal"
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
                                 android:text="@string/posicion_global"
                                 android:layout_marginBottom="6dp"
                                 android:layout_marginRight="6dp"
-                                />
+                                style="@style/Theme.EstiloPrincipal.Botones"/>
 
                             <com.google.android.material.button.MaterialButton
+                                android:id="@+id/btnMovimientos"
                                 android:layout_width="0dp"
                                 android:layout_height="match_parent"
                                 android:text="@string/movimientos"
                                 android:layout_marginBottom="6dp"
                                 android:layout_marginRight="6dp"
                                 android:layout_weight="1"
-                                app:icon="@drawable/ic_movimientos"/>
+                                app:icon="@drawable/ic_movimientos"
+                                style="@style/Theme.EstiloPrincipal.Botones"/>
                         </TableRow>
                         <TableRow
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:gravity="center">
                             <com.google.android.material.button.MaterialButton
+                                android:id="@+id/btnTransferencias"
                                 android:layout_width="0dp"
                                 android:layout_height="match_parent"
                                 android:text="@string/transferencias"
                                 android:layout_marginBottom="6dp"
                                 android:layout_marginRight="6dp"
                                 android:layout_weight="1"
-                                app:icon="@drawable/ic_transferencias"/>
+                                app:icon="@drawable/ic_transferencias"
+                                style="@style/Theme.EstiloPrincipal.Botones"/>
 
                             <com.google.android.material.button.MaterialButton
+                                android:id="@+id/btnCambiarContrasenya"
                                 android:layout_width="0dp"
                                 android:layout_height="match_parent"
                                 android:text="@string/cambiar_contrasenya"
                                 android:layout_marginBottom="6dp"
                                 android:layout_marginRight="6dp"
                                 android:layout_weight="1"
-                                app:icon="@drawable/ic_cambiar_pass"/>
+                                app:icon="@drawable/ic_cambiar_pass"
+                                style="@style/Theme.EstiloPrincipal.Botones"/>
                         </TableRow>
 
                         <TableRow
@@ -126,22 +133,26 @@
                             android:layout_height="match_parent"
                             android:gravity="center">
                             <com.google.android.material.button.MaterialButton
+                                android:id="@+id/btnPromociones"
                                 android:layout_width="0dp"
                                 android:layout_height="match_parent"
                                 android:text="@string/promociones"
                                 android:layout_marginBottom="6dp"
                                 android:layout_marginRight="6dp"
                                 android:layout_weight="1"
-                                app:icon="@drawable/ic_promociones"/>
+                                app:icon="@drawable/ic_promociones"
+                                style="@style/Theme.EstiloPrincipal.Botones"/>
 
                             <com.google.android.material.button.MaterialButton
+                                android:id="@+id/btnCajeros"
                                 android:layout_width="0dp"
                                 android:layout_height="match_parent"
                                 android:text="@string/cajeros"
                                 android:layout_marginBottom="6dp"
                                 android:layout_marginRight="6dp"
                                 android:layout_weight="1"
-                                app:icon="@drawable/ic_cajeros"/>
+                                app:icon="@drawable/ic_cajeros"
+                                style="@style/Theme.EstiloPrincipal.Botones"/>
                         </TableRow>
 
                         <TableRow
@@ -149,12 +160,14 @@
                             android:layout_height="match_parent"
                             android:gravity="center">
                             <com.google.android.material.button.MaterialButton
+                                android:id="@+id/btnSalir"
                                 android:layout_width="0dp"
                                 android:layout_height="match_parent"
                                 android:text="@string/btn_salir"
                                 android:layout_marginBottom="6dp"
                                 android:layout_weight="1"
-                                app:icon="@drawable/ic_salir"/>
+                                app:icon="@drawable/ic_salir"
+                                style="@style/Theme.EstiloPrincipal.Botones"/>
                         </TableRow>
 
                     </TableLayout>

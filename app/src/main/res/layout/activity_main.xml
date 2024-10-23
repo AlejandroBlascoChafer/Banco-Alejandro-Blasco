@@ -77,52 +77,66 @@
                         android:orientation="vertical">
 
                         <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btnPosicionGlobal"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="@string/posicion_global"
-                            android:layout_marginBottom="12dp"/>
+                            android:layout_marginBottom="12dp"
+                            style="@style/Theme.EstiloPrincipal.Botones"/>
 
                         <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btnMovimientos"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:text="@string/movimientos"
                             android:layout_marginBottom="12dp"
-                            app:icon="@drawable/ic_movimientos"/>
+                            app:icon="@drawable/ic_movimientos"
+                            style="@style/Theme.EstiloPrincipal.Botones"/>
 
                         <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btnTransferencias"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:text="@string/transferencias"
                             android:layout_marginBottom="12dp"
-                            app:icon="@drawable/ic_transferencias"/>
+                            app:icon="@drawable/ic_transferencias"
+                            style="@style/Theme.EstiloPrincipal.Botones"/>
 
                         <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btnCambiarContrasenya"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:text="@string/cambiar_contrasenya"
                             android:layout_marginBottom="12dp"
-                            app:icon="@drawable/ic_cambiar_pass"/>
+                            app:icon="@drawable/ic_cambiar_pass"
+                            style="@style/Theme.EstiloPrincipal.Botones"/>
 
                         <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btnPromociones"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:text="@string/promociones"
                             android:layout_marginBottom="12dp"
-                            app:icon="@drawable/ic_promociones"/>
+                            app:icon="@drawable/ic_promociones"
+                            style="@style/Theme.EstiloPrincipal.Botones"/>
 
                         <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btnCajeros"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:text="@string/cajeros"
                             android:layout_marginBottom="12dp"
-                            app:icon="@drawable/ic_cajeros"/>
+                            app:icon="@drawable/ic_cajeros"
+                            style="@style/Theme.EstiloPrincipal.Botones"/>
 
                         <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btnSalir"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:text="@string/btn_salir"
                             android:layout_marginBottom="12dp"
-                            app:icon="@drawable/ic_salir"/>
+                            app:icon="@drawable/ic_salir"
+                            style="@style/Theme.EstiloPrincipal.Botones"/>
                     </LinearLayout>
 
                 </androidx.cardview.widget.CardView>
@@ -137,9 +151,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/bank_icon"
-                app:backgroundTint="@color/grey"
+                app:backgroundTint="#AA9999B4"
                 android:layout_gravity="center|bottom"
-                android:layout_marginBottom="30dp"/>
+                android:layout_marginBottom="50dp"/>
 
 
             <com.google.android.material.bottomappbar.BottomAppBar
@@ -147,10 +161,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="bottom"
-                android:backgroundTint="@color/morado"
                 app:fabCradleMargin="10dp"
                 app:fabCradleRoundedCornerRadius="20dp"
                 app:fabCradleVerticalOffset="10dp"
+                style="@style/Theme.EstiloPrincipal.BottomActionBar"
                 >
 
                 <ImageView
