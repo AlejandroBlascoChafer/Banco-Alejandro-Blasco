@@ -19,7 +19,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:textSize="25dp"/>
+        android:textSize="25sp"
+        android:visibility="gone"/>
 
 
     <com.google.android.material.button.MaterialButton
@@ -31,6 +32,19 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/tvBienvenida"
-        style="@style/Theme.EstiloPrincipal.Botones"/>
+        style="@style/Theme.EstiloPrincipal.Botones"
+        android:visibility="gone"/>
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/ltAnimacion"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="false"
+        app:lottie_rawRes="@raw/splashscreenanimation"
+        android:visibility="visible"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
