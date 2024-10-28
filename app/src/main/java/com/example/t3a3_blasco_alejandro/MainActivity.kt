@@ -16,7 +16,6 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
@@ -34,6 +33,11 @@ class MainActivity : AppCompatActivity() {
         binding.btnCambiarContrasenya.setOnClickListener{
             val cambiarContrasenya = Intent(this, ChangePasswordActivity::class.java)
             startActivity(cambiarContrasenya)
+        }
+
+        binding.btnTransferencias.setOnClickListener{
+            val transferencias = Intent(this, TransfersActivity::class.java)
+            startActivity(transferencias)
         }
 
         enableEdgeToEdge()
