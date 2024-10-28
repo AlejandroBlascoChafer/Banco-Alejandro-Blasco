@@ -22,4 +22,7 @@
     <string name="cuenta_propia">Cuenta propia</string>
     <string name="cuenta_ajena">Cuenta ajena</string>
     <string name="escribe_el_num_cuenta">Escribe el núm. cuenta ajena</string>
+    <string name="cantidad">Cantidad:</string>
+    <string name="enviar_justificante">Enviar justificante</string>
+    <string name="enviar">Enviar</string>
 </resources>
