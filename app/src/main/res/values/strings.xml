@@ -25,4 +25,18 @@
     <string name="cantidad">Cantidad:</string>
     <string name="enviar_justificante">Enviar justificante</string>
     <string name="enviar">Enviar</string>
+
+    <string-array name="cuentas">
+        <item> </item>
+        <item>ES10–1234–5678–90–1234567890</item>
+        <item>ES10–3456–5678–90–1234567890</item>
+        <item>ES10–4567–5678–90–1234567890</item>
+        <item>ES10–5678–5678–90–1234567890</item>
+    </string-array>
+
+    <string-array name="divisas">
+        <item>€</item>
+        <item>$</item>
+        <item>£</item>
+    </string-array>
 </resources>

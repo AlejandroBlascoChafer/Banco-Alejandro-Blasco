@@ -134,7 +134,7 @@
         app:layout_constraintTop_toBottomOf="@id/etCuentaAjena" />
 
     <CheckBox
-        android:id="@+id/justificante"
+        android:id="@+id/cbJustificante"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="@string/enviar_justificante"
@@ -150,19 +150,19 @@
         android:layout_marginTop="30dp"
         app:layout_constraintEnd_toEndOf="@id/guidelineVertical"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/justificante"
+        app:layout_constraintTop_toBottomOf="@id/cbJustificante"
         android:text="@string/enviar"
         android:textSize="20sp"
         style="@style/Theme.EstiloPrincipal.Botones"/>
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/btncancelar"
+        android:id="@+id/btnCancelar"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@id/guidelineVertical"
-        app:layout_constraintTop_toBottomOf="@id/justificante"
+        app:layout_constraintTop_toBottomOf="@id/cbJustificante"
         android:text="@string/cancelar"
         android:textSize="20sp"
         style="@style/Theme.EstiloPrincipal.Botones"/>
