@@ -1,4 +1,4 @@
-package com.example.Banco_Blasco_Alejandro.activities
+package com.example.t3a3_blasco_alejandro.activities
 
 import android.animation.Animator
 import android.animation.AnimatorListenerAdapter
@@ -11,8 +11,8 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.airbnb.lottie.LottieAnimationView
-import com.example.Banco_Blasco_Alejandro.R
-import com.example.Banco_Blasco_Alejandro.databinding.ActivityWelcomeBinding
+import com.example.t3a3_blasco_alejandro.R
+import com.example.t3a3_blasco_alejandro.databinding.ActivityWelcomeBinding
 import com.google.android.material.button.MaterialButton
 
 class WelcomeActivity : AppCompatActivity() {

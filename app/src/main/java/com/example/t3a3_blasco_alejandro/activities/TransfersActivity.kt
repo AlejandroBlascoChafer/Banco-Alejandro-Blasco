@@ -1,4 +1,4 @@
-package com.example.Banco_Blasco_Alejandro.activities
+package com.example.t3a3_blasco_alejandro.activities
 
 import android.os.Bundle
 import android.view.View
@@ -8,8 +8,8 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import com.example.Banco_Blasco_Alejandro.R
-import com.example.Banco_Blasco_Alejandro.databinding.ActivityTransfersBinding
+import com.example.t3a3_blasco_alejandro.R
+import com.example.t3a3_blasco_alejandro.databinding.ActivityTransfersBinding
 
 class TransfersActivity : AppCompatActivity() {
 

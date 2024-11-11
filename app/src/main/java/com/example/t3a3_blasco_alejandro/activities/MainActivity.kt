@@ -1,4 +1,4 @@
-package com.example.Banco_Blasco_Alejandro.activities
+package com.example.t3a3_blasco_alejandro.activities
 
 import android.content.Intent
 import android.os.Bundle
@@ -21,10 +21,10 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
 
-        val textoRecibido = intent.getStringExtra("DNI")
+        val cliente = intent.getSerializableExtra("Cliente")
 
 
-        binding.idTextView.text = textoRecibido
+        binding.idTextView.text = "Bienvenido/a $cliente.getNombre()"
 
         binding.btnSalir.setOnClickListener{
             val salir = Intent(this, LoginActivity::class.java)

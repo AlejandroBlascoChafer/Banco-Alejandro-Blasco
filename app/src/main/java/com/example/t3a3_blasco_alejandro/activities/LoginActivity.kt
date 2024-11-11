@@ -1,4 +1,4 @@
-package com.example.Banco_Blasco_Alejandro.activities
+package com.example.t3a3_blasco_alejandro.activities
 
 import android.content.Intent
 import android.os.Bundle
@@ -7,8 +7,10 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import com.example.Banco_Blasco_Alejandro.R
-import com.example.Banco_Blasco_Alejandro.databinding.ActivityLoginBinding
+import com.example.bancoapiprofe.bd.MiBancoOperacional
+import com.example.bancoapiprofe.pojo.Cliente
+import com.example.t3a3_blasco_alejandro.R
+import com.example.t3a3_blasco_alejandro.databinding.ActivityLoginBinding
 
 class LoginActivity : AppCompatActivity() {
 
@@ -27,21 +29,31 @@ class LoginActivity : AppCompatActivity() {
 
         binding.btnEntrar.setOnClickListener{
 
-            val usuario = binding.etUsuario.text.toString()
+            val mbo: MiBancoOperacional? = MiBancoOperacional.getInstance(this)
 
-            val contrasena = binding.etPassword.text.toString()
+            var cliente = Cliente()
+            cliente.setNif(binding.etUsuario.text.toString())
+            cliente.setClaveSeguridad(binding.etPassword.text.toString())
 
-            if (usuario.isEmpty() || contrasena.isEmpty()) {
+
+            if (binding.etUsuario.text.toString().isEmpty() || binding.etPassword.text.toString().isEmpty()) {
 
                 Toast.makeText(this, "Por favor, completa todos los campos.", Toast.LENGTH_SHORT).show()
 
             } else {
 
-                val intent = Intent(this, MainActivity::class.java).apply {
-                    putExtra("DNI", usuario)
+                val clienteLogueado = mbo?.login(cliente) ?: -1
+
+                if (clienteLogueado == -1) {
+                    Toast.makeText(this, "El cliente no se encuentra registrado en la BD", Toast.LENGTH_LONG).show()
+                }else{
+                    val intent = Intent(this, MainActivity::class.java)
+                    intent.putExtra("Cliente", clienteLogueado)
+                    startActivity(intent)
                 }
 
-                startActivity(intent)
+
+
             }
 
 

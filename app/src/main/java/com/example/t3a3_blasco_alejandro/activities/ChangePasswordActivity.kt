@@ -1,4 +1,4 @@
-package com.example.Banco_Blasco_Alejandro.activities
+package com.example.t3a3_blasco_alejandro.activities
 
 import android.content.Intent
 import android.os.Bundle
