@@ -1,4 +1,4 @@
-package com.example.t3a3_blasco_alejandro
+package com.example.Banco_Blasco_Alejandro.activities
 
 import android.content.Intent
 import android.os.Bundle
@@ -6,7 +6,8 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import com.example.t3a3_blasco_alejandro.databinding.ActivityLoginBinding
+import com.example.t3a3_blasco_alejandro.R
+
 import com.example.t3a3_blasco_alejandro.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {

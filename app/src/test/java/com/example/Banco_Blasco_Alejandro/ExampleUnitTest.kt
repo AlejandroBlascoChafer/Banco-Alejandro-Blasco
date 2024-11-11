@@ -1,4 +1,4 @@
-package com.example.t3a3_blasco_alejandro
+package com.example.Banco_Blasco_Alejandro
 
 import org.junit.Test
 
