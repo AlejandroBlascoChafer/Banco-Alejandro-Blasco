@@ -7,6 +7,8 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.example.bancoapiprofe.bd.MiBancoOperacional
+import com.example.bancoapiprofe.pojo.Cliente
 import com.example.t3a3_blasco_alejandro.R
 import com.example.t3a3_blasco_alejandro.databinding.ActivityChangePasswordBinding
 
@@ -17,9 +19,11 @@ class ChangePasswordActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-
+        val mbo: MiBancoOperacional? = MiBancoOperacional.getInstance(this)
         binding = ActivityChangePasswordBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        val cliente:Cliente = intent.getSerializableExtra("Cliente") as Cliente
 
         binding.btnCambiar.setOnClickListener{
             val contrasenya = binding.etContrasenya.text.toString()
@@ -30,9 +34,20 @@ class ChangePasswordActivity : AppCompatActivity() {
 
                 Toast.makeText(this, "Por favor, completa todos los campos.", Toast.LENGTH_SHORT).show()
 
+            }else if (contrasenya == contrasenyaRepertir){
+                cliente.setClaveSeguridad(contrasenyaRepertir)
+                val resultado = mbo?.changePassword(cliente) ?: -1
+                if (resultado == 1){
+                    val cambiar = Intent(this, MainActivity::class.java)
+                    cambiar.putExtra("Cliente", cliente)
+                    startActivity(cambiar)
+                } else if (resultado == 0){
+                    Toast.makeText(this, "No se ha realizado el cambio de contraseña", Toast.LENGTH_SHORT).show()
+                }
             } else {
-                val cambiar = Intent(this, MainActivity::class.java)
-                startActivity(cambiar)
+
+                Toast.makeText(this, "Las contraseñas no coinciden", Toast.LENGTH_SHORT).show()
+
             }
 
         }

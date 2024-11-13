@@ -24,7 +24,7 @@ class MainActivity : AppCompatActivity() {
         val cliente = intent.getSerializableExtra("Cliente")
 
 
-        binding.idTextView.text = "Bienvenido/a $cliente.getNombre()"
+        binding.idTextView.text = "Bienvenido/a $cliente"
 
         binding.btnSalir.setOnClickListener{
             val salir = Intent(this, LoginActivity::class.java)
@@ -33,6 +33,7 @@ class MainActivity : AppCompatActivity() {
 
         binding.btnCambiarContrasenya.setOnClickListener{
             val cambiarContrasenya = Intent(this, ChangePasswordActivity::class.java)
+            cambiarContrasenya.putExtra("Cliente", cliente)
             startActivity(cambiarContrasenya)
         }
 

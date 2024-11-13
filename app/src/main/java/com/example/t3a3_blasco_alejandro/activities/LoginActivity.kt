@@ -42,14 +42,19 @@ class LoginActivity : AppCompatActivity() {
 
             } else {
 
-                val clienteLogueado = mbo?.login(cliente) ?: -1
+                try {
+                    val clienteLogueado = mbo?.login(cliente) ?: -1
 
-                if (clienteLogueado == -1) {
-                    Toast.makeText(this, "El cliente no se encuentra registrado en la BD", Toast.LENGTH_LONG).show()
-                }else{
-                    val intent = Intent(this, MainActivity::class.java)
-                    intent.putExtra("Cliente", clienteLogueado)
-                    startActivity(intent)
+                    if (clienteLogueado == -1) {
+                        Toast.makeText(this, "El cliente no se encuentra registrado en la BD", Toast.LENGTH_LONG).show()
+                    } else {
+                        val intent = Intent(this, MainActivity::class.java)
+                        intent.putExtra("Cliente", clienteLogueado)
+                        startActivity(intent)
+                    }
+                } catch (e: Exception) {
+                    e.printStackTrace()
+                    Toast.makeText(this, "Error al intentar iniciar sesión", Toast.LENGTH_LONG).show()
                 }
 
 
