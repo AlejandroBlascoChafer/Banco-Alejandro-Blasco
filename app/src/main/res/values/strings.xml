@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">T3A3-Blasco-Alejandro</string>
+    <string name="app_name">Banco_Blasco_Alejandro</string>
     <string name="usuario">Introduce el DNI</string>
     <string name="iniciar_sesion">Iniciar Sesión</string>
     <string name="contrasenya">Introduce la contraseña</string>
@@ -25,6 +25,9 @@
     <string name="cantidad">Cantidad:</string>
     <string name="enviar_justificante">Enviar justificante</string>
     <string name="enviar">Enviar</string>
+    <string name="posicion_Global">Posición Global</string>
+    <string name="cuentas">Cuentas</string>
+    <string name="cuentasPosicion">Cuentas:</string>
 
     <string-array name="cuentas">
         <item> </item>

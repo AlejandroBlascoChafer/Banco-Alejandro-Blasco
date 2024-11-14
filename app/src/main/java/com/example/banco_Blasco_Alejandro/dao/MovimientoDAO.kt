@@ -1,10 +1,10 @@
-package com.example.bancoapiprofe.dao
+package com.example.banco_Blasco_Alejandro.dao
 
 import android.content.ContentValues
 import android.database.Cursor
 import com.example.bancoapiprofe.bd.MiBD
-import com.example.bancoapiprofe.pojo.Cuenta
-import com.example.bancoapiprofe.pojo.Movimiento
+import com.example.banco_Blasco_Alejandro.pojo.Cuenta
+import com.example.banco_Blasco_Alejandro.pojo.Movimiento
 import java.lang.String
 import java.util.Date
 import kotlin.Any

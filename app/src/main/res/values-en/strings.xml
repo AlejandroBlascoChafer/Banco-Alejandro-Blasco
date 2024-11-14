@@ -18,4 +18,12 @@
     <string name="cambiar">Change</string>
     <string name="cancelar">Cancel</string>
     <string name="repite_la_contrasenya">Repeat the password</string>
+    <string name="elige_tu_cuenta">Choose your account</string>
+    <string name="cuenta_propia">Own account</string>
+    <string name="cuenta_ajena">Third-party account</string>
+    <string name="escribe_el_num_cuenta">Enter third-party account number</string>
+    <string name="cantidad">Amount:</string>
+    <string name="enviar_justificante">Send receipt</string>
+    <string name="enviar">Send</string>
+
 </resources>

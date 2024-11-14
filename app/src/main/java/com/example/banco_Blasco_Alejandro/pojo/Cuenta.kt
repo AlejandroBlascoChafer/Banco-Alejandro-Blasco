@@ -1,4 +1,4 @@
-package com.example.bancoapiprofe.pojo
+package com.example.banco_Blasco_Alejandro.pojo
 
 import java.io.Serializable
 

@@ -1,4 +1,4 @@
-package com.example.t3a3_blasco_alejandro
+package com.example.banco_Blasco_Alejandro
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4

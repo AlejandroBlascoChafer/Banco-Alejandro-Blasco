@@ -1,4 +1,4 @@
-package com.example.t3a3_blasco_alejandro.activities
+package com.example.banco_Blasco_Alejandro.activities
 
 import android.content.Intent
 import android.os.Bundle
@@ -8,9 +8,9 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.bancoapiprofe.bd.MiBancoOperacional
-import com.example.bancoapiprofe.pojo.Cliente
-import com.example.t3a3_blasco_alejandro.R
-import com.example.t3a3_blasco_alejandro.databinding.ActivityChangePasswordBinding
+import com.example.banco_Blasco_Alejandro.pojo.Cliente
+import com.example.banco_Blasco_Alejandro.R
+import com.example.banco_Blasco_Alejandro.databinding.ActivityChangePasswordBinding
 
 class ChangePasswordActivity : AppCompatActivity() {
 
@@ -23,7 +23,7 @@ class ChangePasswordActivity : AppCompatActivity() {
         binding = ActivityChangePasswordBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val cliente:Cliente = intent.getSerializableExtra("Cliente") as Cliente
+        val cliente: Cliente = intent.getSerializableExtra("Cliente") as Cliente
 
         binding.btnCambiar.setOnClickListener{
             val contrasenya = binding.etContrasenya.text.toString()

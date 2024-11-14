@@ -1,4 +1,4 @@
-package com.example.t3a3_blasco_alejandro.activities
+package com.example.banco_Blasco_Alejandro.activities
 
 import android.content.Intent
 import android.os.Bundle
@@ -6,9 +6,9 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import com.example.t3a3_blasco_alejandro.R
+import com.example.banco_Blasco_Alejandro.R
 
-import com.example.t3a3_blasco_alejandro.databinding.ActivityMainBinding
+import com.example.banco_Blasco_Alejandro.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
 
@@ -40,6 +40,12 @@ class MainActivity : AppCompatActivity() {
         binding.btnTransferencias.setOnClickListener{
             val transferencias = Intent(this, TransfersActivity::class.java)
             startActivity(transferencias)
+        }
+
+        binding.btnPosicionGlobal.setOnClickListener{
+            val posicion = Intent(this, GlobalPositionActivity::class.java)
+            posicion.putExtra("Cliente", cliente)
+            startActivity(posicion)
         }
 
         enableEdgeToEdge()

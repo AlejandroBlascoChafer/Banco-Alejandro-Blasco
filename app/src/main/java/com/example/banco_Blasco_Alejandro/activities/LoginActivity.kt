@@ -1,4 +1,4 @@
-package com.example.t3a3_blasco_alejandro.activities
+package com.example.banco_Blasco_Alejandro.activities
 
 import android.content.Intent
 import android.os.Bundle
@@ -8,9 +8,9 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.bancoapiprofe.bd.MiBancoOperacional
-import com.example.bancoapiprofe.pojo.Cliente
-import com.example.t3a3_blasco_alejandro.R
-import com.example.t3a3_blasco_alejandro.databinding.ActivityLoginBinding
+import com.example.banco_Blasco_Alejandro.pojo.Cliente
+import com.example.banco_Blasco_Alejandro.R
+import com.example.banco_Blasco_Alejandro.databinding.ActivityLoginBinding
 
 class LoginActivity : AppCompatActivity() {
 
@@ -31,7 +31,7 @@ class LoginActivity : AppCompatActivity() {
 
             val mbo: MiBancoOperacional? = MiBancoOperacional.getInstance(this)
 
-            var cliente = Cliente()
+            val cliente = Cliente()
             cliente.setNif(binding.etUsuario.text.toString())
             cliente.setClaveSeguridad(binding.etPassword.text.toString())
 

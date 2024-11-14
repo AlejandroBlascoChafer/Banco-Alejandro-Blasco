@@ -4,7 +4,7 @@ plugins {
 }
 
 android {
-    namespace = "com.example.t3a3_blasco_alejandro"
+    namespace = "com.example.banco_Blasco_Alejandro"
     compileSdk = 34
 
     defaultConfig {

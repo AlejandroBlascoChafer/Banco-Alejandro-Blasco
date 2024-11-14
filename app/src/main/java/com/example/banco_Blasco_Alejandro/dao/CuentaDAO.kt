@@ -1,11 +1,11 @@
-package com.example.bancoapiprofe.dao
+package com.example.banco_Blasco_Alejandro.dao
 
 import android.content.ContentValues
 import android.database.Cursor
 import android.text.TextUtils
 import com.example.bancoapiprofe.bd.MiBD
-import com.example.bancoapiprofe.pojo.Cliente
-import com.example.bancoapiprofe.pojo.Cuenta
+import com.example.banco_Blasco_Alejandro.pojo.Cliente
+import com.example.banco_Blasco_Alejandro.pojo.Cuenta
 import java.lang.String
 import kotlin.Any
 import kotlin.Int
@@ -84,7 +84,7 @@ class CuentaDAO : PojoDAO {
         }
     }
 
-    override fun getAll(): ArrayList<*> {
+    override fun getAll(): ArrayList<Cuenta> {
         val listaCuentas: ArrayList<Cuenta> = ArrayList<Cuenta>()
         val columnas = arrayOf(
             "id", "banco", "sucursal", "dc", "numerocuenta", "saldoactual", "idcliente"
@@ -104,8 +104,8 @@ class CuentaDAO : PojoDAO {
                 // Obtenemos el cliente y lo asignamos
                 var a = Cliente()
                 a.setId(cursor.getInt(6))
-                a = MiBD.getInstance(null)?.clienteDAO!!.search(a) as Cliente
-                c.setCliente(a)
+                a = MiBD.getInstance(null)?.clienteDAO?.search(a) as Cliente
+                if (a != null) c.setCliente(a)
 
                 // Obtenemos la lista de movimientos y los asignamos
                 //c.setListaMovimientos(MiBD.getInstance(null).getMovimientoDAO().getMovimientos(c));
