@@ -28,8 +28,8 @@ class GlobalPositionActivity : AppCompatActivity() {
         binding = ActivityGlobalPositionBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val cliente = intent.getSerializableExtra("Cliente")
-        val cuentas = mbo?.getCuentas(cliente as Cliente)
+        val cliente = intent.getSerializableExtra("Cliente") as? Cliente
+        val cuentas = mbo?.getCuentas(cliente)
 
         posicionAdapter = PosicionAdapter(cuentas as ArrayList<Cuenta>)
         linearLayoutManager = LinearLayoutManager(this)

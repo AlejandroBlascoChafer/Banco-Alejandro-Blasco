@@ -7,7 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.banco_Blasco_Alejandro.R
-import com.example.banco_Blasco_Alejandro.databinding.ItemPosicionGlobalBinding
+import com.example.banco_Blasco_Alejandro.databinding.ItemGlobalPositionBinding
 import com.example.banco_Blasco_Alejandro.pojo.Cuenta
 
 class PosicionAdapter(private val cuentas: ArrayList<Cuenta>): RecyclerView.Adapter<PosicionAdapter.ViewHolder>() {
@@ -15,16 +15,16 @@ class PosicionAdapter(private val cuentas: ArrayList<Cuenta>): RecyclerView.Adap
     private lateinit var context: Context
 
     inner class ViewHolder(view: View): RecyclerView.ViewHolder(view){
-        val binding = ItemPosicionGlobalBinding.bind(view)
+        val binding = ItemGlobalPositionBinding.bind(view)
 
     }
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PosicionAdapter.ViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         context = parent.context
-        val view = LayoutInflater.from(context).inflate(R.layout.item_posicion_global, parent, false)
+        val view = LayoutInflater.from(context).inflate(R.layout.item_global_position, parent, false)
         return ViewHolder(view)
     }
 
-    override fun onBindViewHolder(holder: PosicionAdapter.ViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val posicion = cuentas.get(position)
         with(holder){
             if (posicion.getSaldoActual()!! > 0) {
@@ -32,7 +32,8 @@ class PosicionAdapter(private val cuentas: ArrayList<Cuenta>): RecyclerView.Adap
             } else {
                 binding.tvSaldo.setTextColor(Color.RED)
             }
-            binding.tvCuenta.text = posicion.getNumeroCuenta()
+            val numeroCuenta = posicion.getBanco() + "-" + posicion.getSucursal() +  "-" + posicion.getDc() + "-" +  posicion.getNumeroCuenta()
+            binding.tvCuenta.text = numeroCuenta
             binding.tvSaldo.text = posicion.getSaldoActual().toString()
         }
     }

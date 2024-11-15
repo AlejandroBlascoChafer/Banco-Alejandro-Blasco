@@ -48,6 +48,12 @@ class MainActivity : AppCompatActivity() {
             startActivity(posicion)
         }
 
+        binding.btnMovimientos.setOnClickListener{
+            val movimientos = Intent(this, MovementsActivity::class.java)
+            movimientos.putExtra("Cliente", cliente)
+            startActivity(movimientos)
+        }
+
         enableEdgeToEdge()
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->

@@ -28,6 +28,8 @@
     <string name="posicion_Global">Posición Global</string>
     <string name="cuentas">Cuentas</string>
     <string name="cuentasPosicion">Cuentas:</string>
+    <string name="ultimos_movimientos">Últimos movimientos:</string>
+    <string name="seleccionar_cuenta">Selecciona la cuenta:</string>
 
     <string-array name="cuentas">
         <item> </item>

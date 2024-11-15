@@ -38,12 +38,12 @@
                     android:id="@+id/tvCuenta"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="asd"/>
+                    android:text=""/>
                 <TextView
                     android:id="@+id/tvSaldo"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="asd"/>
+                    android:text=""/>
 
             </LinearLayout>
 
