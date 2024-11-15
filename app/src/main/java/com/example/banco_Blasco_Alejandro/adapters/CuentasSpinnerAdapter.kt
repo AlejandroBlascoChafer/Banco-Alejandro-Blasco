@@ -20,7 +20,7 @@ class CuentasSpinnerAdapter(context: Context, cuentas: List<Cuenta>) : ArrayAdap
     override fun getDropDownView(position: Int, convertView: View?, parent: ViewGroup): View {
         val view = super.getDropDownView(position, convertView, parent)
         val cuenta = getItem(position)
-        val numeroCuenta = cuenta?.getNumeroCuenta() ?: "Sin número"
+        val numeroCuenta = cuenta?.getBanco() + "-" + cuenta?.getSucursal() +  "-" + cuenta?.getDc() + "-" +  cuenta?.getNumeroCuenta()
         (view as TextView).text = numeroCuenta
         return view
     }
