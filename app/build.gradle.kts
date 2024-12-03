@@ -8,7 +8,7 @@ android {
     compileSdk = 35
 
     defaultConfig {
-        applicationId = "com.example.t3a3_blasco_alejandro"
+        applicationId = "com.example.banco_Blasco_Alejandro"
         minSdk = 24
         targetSdk = 34
         versionCode = 1

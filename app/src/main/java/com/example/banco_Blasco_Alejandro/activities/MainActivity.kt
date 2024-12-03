@@ -23,8 +23,8 @@ class MainActivity : AppCompatActivity() {
 
         val cliente = intent.getSerializableExtra("Cliente")
 
-
-        binding.idTextView.text = "Bienvenido/a $cliente"
+        val bienvenida = "Bienvenido/a $cliente"
+        binding.idTextView.text = bienvenida
 
         binding.btnSalir.setOnClickListener{
             val salir = Intent(this, LoginActivity::class.java)
