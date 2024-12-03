@@ -5,7 +5,7 @@ plugins {
 
 android {
     namespace = "com.example.banco_Blasco_Alejandro"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "com.example.t3a3_blasco_alejandro"

@@ -18,18 +18,11 @@
         android:textSize="30sp"
         />
 
-    <TextView
-        android:id="@+id/tvSubtitulo"
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/frgCuentas"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/cuentasPosicion"
-        android:layout_marginStart="16dp"
-        android:textSize="20sp"
-        android:layout_marginTop="30dp"
-        />
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rvCuentas"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        />
+        android:layout_height="match_parent"
+        android:name="com.example.banco_Blasco_Alejandro.fragments.AccountFragment"
+        tools:layout="@layout/fragment_accounts"/>
+
 </LinearLayout>
