@@ -8,14 +8,20 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.banco_Blasco_Alejandro.R
 import com.example.banco_Blasco_Alejandro.databinding.ItemMovementsBinding
+import com.example.banco_Blasco_Alejandro.fragments.MovementsListener
 import com.example.banco_Blasco_Alejandro.pojo.Movimiento
 
-class MovementsAdapter(private var movimientos: ArrayList<Movimiento>): RecyclerView.Adapter<MovementsAdapter.ViewHolder>() {
+class MovementsAdapter(private var movimientos: List<Movimiento>, private val listener: MovementsListener): RecyclerView.Adapter<MovementsAdapter.ViewHolder>() {
 
     private lateinit var context: Context
 
     inner class ViewHolder(view: View): RecyclerView.ViewHolder(view){
         val binding = ItemMovementsBinding.bind(view)
+        fun setListener(movimiento: Movimiento){
+            binding.root.setOnClickListener{
+                listener.OnClickMovements(movimiento)
+            }
+        }
 
     }
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MovementsAdapter.ViewHolder {
@@ -28,6 +34,7 @@ class MovementsAdapter(private var movimientos: ArrayList<Movimiento>): Recycler
         val movimiento = movimientos[position]
         val datos = movimiento.getFechaOperacion().toString() + "Importe: " + movimiento.getImporte()
         with (holder){
+            setListener(movimiento)
             binding.tvMovimientos.text = movimiento.getDescripcion()
             binding.tvDatosMovimientos.text = datos
         }

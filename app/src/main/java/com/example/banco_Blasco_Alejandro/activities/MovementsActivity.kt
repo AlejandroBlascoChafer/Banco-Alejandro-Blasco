@@ -12,12 +12,13 @@ import com.example.banco_Blasco_Alejandro.R
 import com.example.banco_Blasco_Alejandro.adapters.CuentasSpinnerAdapter
 import com.example.banco_Blasco_Alejandro.adapters.MovementsAdapter
 import com.example.banco_Blasco_Alejandro.databinding.ActivityMovementsBinding
+import com.example.banco_Blasco_Alejandro.fragments.MovementsListener
 import com.example.banco_Blasco_Alejandro.pojo.Cliente
 import com.example.banco_Blasco_Alejandro.pojo.Cuenta
 import com.example.banco_Blasco_Alejandro.pojo.Movimiento
 import com.example.bancoapiprofe.bd.MiBancoOperacional
 
-class MovementsActivity : AppCompatActivity() {
+class MovementsActivity : AppCompatActivity(), MovementsListener {
 
     private lateinit var binding: ActivityMovementsBinding
     private lateinit var movementsAdapter: MovementsAdapter
@@ -39,7 +40,7 @@ class MovementsActivity : AppCompatActivity() {
         var movimientos = mbo.getMovimientos(cuentas[0])
 
 
-        movementsAdapter = MovementsAdapter(movimientos as ArrayList<Movimiento>)
+        movementsAdapter = MovementsAdapter(movimientos as ArrayList<Movimiento>, this)
 
         linearLayoutManager = LinearLayoutManager(this)
 
@@ -93,5 +94,9 @@ class MovementsActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+    }
+
+    override fun OnClickMovements(movimiento: Movimiento) {
+        return
     }
 }

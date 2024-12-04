@@ -10,7 +10,7 @@ import com.example.banco_Blasco_Alejandro.R
 import com.example.banco_Blasco_Alejandro.databinding.ItemGlobalPositionBinding
 import com.example.banco_Blasco_Alejandro.pojo.Cuenta
 
-class GlobalPositionAdapter(private val cuentas: ArrayList<Cuenta>, private val listener: OnClickListener):
+class GlobalPositionAdapter(private val cuentas: List<Cuenta>, private val listener: OnClickListener):
     RecyclerView.Adapter<GlobalPositionAdapter.ViewHolder>() {
 
     private lateinit var context: Context

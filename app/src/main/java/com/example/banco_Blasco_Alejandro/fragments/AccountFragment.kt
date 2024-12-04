@@ -23,48 +23,39 @@ class AccountFragment : Fragment(), OnClickListener {
 
     private lateinit var listener: AccountsListener
 
-    private lateinit var cliente: Cliente
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        arguments?.let {
-            cliente = it.getSerializable(ARG_CLIENTE) as Cliente
-            println("El fragment ha recibido el cliente")
-        }
-    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         binding = FragmentAccountsBinding.inflate(inflater, container, false)
-        val mbo: MiBancoOperacional? = MiBancoOperacional.getInstance(context)
 
-        val listaCuentas: ArrayList<Cuenta> = mbo?.getCuentas(cliente as Cliente?) as ArrayList<Cuenta>
+        val cliente = arguments?.getSerializable("cliente") as? Cliente
 
+        if (cliente != null){
+            val listaCuentas = getCuentas(cliente)
 
-        globalPositionAdapter = GlobalPositionAdapter(listaCuentas, this)
-        linearLayoutManager = LinearLayoutManager(context)
+            globalPositionAdapter = GlobalPositionAdapter(listaCuentas, this)
+            linearLayoutManager = LinearLayoutManager(context)
 
-        binding.rvCuentas.apply {
-            layoutManager = linearLayoutManager
-            adapter = globalPositionAdapter
+            binding.rvCuentas.apply {
+                layoutManager = linearLayoutManager
+                adapter = globalPositionAdapter
+            }
         }
+
+
+
 
         return binding.root
     }
 
-    companion object {
-        @JvmStatic
-        fun newInstance(c: Cliente) =
-            AccountFragment().apply {
-                arguments = Bundle().apply {
-                    putSerializable(ARG_CLIENTE, c)
-                }
-            }
+
+    private fun getCuentas(cliente: Cliente): List<Cuenta> {
+        val mbo = MiBancoOperacional.getInstance(requireContext())
+        return mbo?.getCuentas(cliente) as? ArrayList<Cuenta> ?: listOf()
     }
-
-
 
     override fun onClick(cuenta: Cuenta) {
         if (::listener.isInitialized){
