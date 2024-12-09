@@ -1,28 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".activities.GlobalPositionActivity">
+    tools:context=".fragments.AccountFragment">
+
 
     <TextView
         android:id="@+id/tvTitulo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="20dp"
         android:text="@string/posicion_Global"
         android:textAlignment="center"
         android:textSize="30sp"
         />
 
-    <androidx.fragment.app.FragmentContainerView
-        android:id="@+id/frgCuentas"
+    <TextView
+        android:id="@+id/tvSubtitulo"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:name="com.example.banco_Blasco_Alejandro.fragments.AccountFragment"
-        tools:layout="@layout/fragment_accounts"/>
+        android:layout_height="wrap_content"
+        android:text="@string/cuentasPosicion"
+        android:layout_marginStart="16dp"
+        android:textSize="20sp"
+        android:layout_marginTop="30dp"
+        />
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvCuentas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
 
 </LinearLayout>

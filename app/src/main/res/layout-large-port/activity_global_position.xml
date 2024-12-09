@@ -8,21 +8,21 @@
     android:orientation="vertical"
     tools:context=".activities.GlobalPositionActivity">
 
-    <TextView
-        android:id="@+id/tvTitulo"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:text="@string/posicion_Global"
-        android:textAlignment="center"
-        android:textSize="30sp"
-        />
+
 
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/frgCuentas"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:name="com.example.banco_Blasco_Alejandro.fragments.AccountFragment"
         tools:layout="@layout/fragment_accounts"/>
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/frgContenedorMovimientos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:name="com.example.banco_Blasco_Alejandro.fragments.AccountsMovementsFragment"
+        tools:layout="@layout/fragment_accounts_movements"
+        />
 
 </LinearLayout>
