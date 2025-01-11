@@ -29,6 +29,12 @@
     <string name="cuentasPosicion">Cuentas:</string>
     <string name="ultimos_movimientos">Últimos movimientos:</string>
     <string name="seleccionar_cuenta">Selecciona la cuenta:</string>
+    <string name="ajustes">Ajustes\n</string>
+    <string name="open_nav">open\\n</string>
+    <string name="close_nav">close\n</string>
+    <string name="mi_banco">Mi banco\n</string>
+    <string name="contacto_gmail_com">contacto\n</string>
+
 
     <string-array name="cuentas">
         <item> </item>
