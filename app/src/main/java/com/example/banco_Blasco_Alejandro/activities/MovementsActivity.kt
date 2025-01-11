@@ -59,7 +59,6 @@ class MovementsActivity : AppCompatActivity(), MovementsListener {
 
 
 
-
         binding.spCuentas.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
             override fun onItemSelected(
                 parent: AdapterView<*>?,
@@ -67,6 +66,7 @@ class MovementsActivity : AppCompatActivity(), MovementsListener {
                 position: Int,
                 id: Long
             ) {
+
                 val selectedCuenta = cuentas[position]
                 movimientos = mbo?.getMovimientos(selectedCuenta)
 
@@ -89,7 +89,7 @@ class MovementsActivity : AppCompatActivity(), MovementsListener {
 
 
 
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
+        ViewCompat.setOnApplyWindowInsetsListener(binding.root) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets

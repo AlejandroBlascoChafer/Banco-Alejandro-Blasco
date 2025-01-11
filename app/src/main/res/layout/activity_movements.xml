@@ -14,7 +14,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
-        android:text="@string/posicion_Global"
+        android:text="@string/posicion_global"
         android:textAlignment="center"
         android:textSize="30sp"
         />

@@ -47,7 +47,7 @@ class GlobalPositionActivity : AppCompatActivity(), AccountsListener {
 
         }
 
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
+        ViewCompat.setOnApplyWindowInsetsListener(binding.root) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
@@ -56,7 +56,7 @@ class GlobalPositionActivity : AppCompatActivity(), AccountsListener {
 
     override fun onCuentaSeleccionada(cuenta: Cuenta) {
 
-        var hayMovimiento = findViewById<View?>(R.id.frgContenedorMovimientos) != null
+        val hayMovimiento = binding.frgContenedorMovimientos != null
 
         if (hayMovimiento){
             val frgAccountsMovements: AccountsMovementsFragment = AccountsMovementsFragment().apply{

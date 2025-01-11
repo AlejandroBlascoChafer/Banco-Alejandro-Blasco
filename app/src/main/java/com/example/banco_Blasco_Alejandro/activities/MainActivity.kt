@@ -9,6 +9,7 @@ import androidx.core.view.WindowInsetsCompat
 import com.example.banco_Blasco_Alejandro.R
 
 import com.example.banco_Blasco_Alejandro.databinding.ActivityMainBinding
+import com.example.banco_Blasco_Alejandro.pojo.Cliente
 
 class MainActivity : AppCompatActivity() {
 
@@ -21,9 +22,9 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
 
-        val cliente = intent.getSerializableExtra("Cliente")
+        val cliente = intent.getSerializableExtra("Cliente") as Cliente
 
-        val bienvenida = "Bienvenido/a $cliente"
+        val bienvenida = "Bienvenido/a \n${cliente.getNombre()}"
         binding.idTextView.text = bienvenida
 
         binding.btnSalir.setOnClickListener{
@@ -56,7 +57,7 @@ class MainActivity : AppCompatActivity() {
 
         enableEdgeToEdge()
 
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
+        ViewCompat.setOnApplyWindowInsetsListener(binding.root) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
