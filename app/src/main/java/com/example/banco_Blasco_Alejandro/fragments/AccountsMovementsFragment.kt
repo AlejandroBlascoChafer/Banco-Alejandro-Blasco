@@ -17,6 +17,7 @@ import com.example.banco_Blasco_Alejandro.pojo.Cliente
 import com.example.banco_Blasco_Alejandro.pojo.Cuenta
 import com.example.banco_Blasco_Alejandro.pojo.Movimiento
 import com.example.bancoapiprofe.bd.MiBancoOperacional
+import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 
 class AccountsMovementsFragment : Fragment(), MovementsListener {
@@ -35,9 +36,10 @@ class AccountsMovementsFragment : Fragment(), MovementsListener {
         binding = FragmentAccountsMovementsBinding.inflate(inflater, container, false)
 
         val cuenta = arguments?.getSerializable("cuenta") as? Cuenta
+        var movimientos:List<Movimiento>
 
         if (cuenta != null){
-            val movimientos = getMovimientos(cuenta)
+            movimientos = getMovimientos(cuenta)
 
             movementsAdapter = MovementsAdapter(movimientos, this)
             linearLayoutManager = LinearLayoutManager(context)
@@ -47,12 +49,66 @@ class AccountsMovementsFragment : Fragment(), MovementsListener {
                 adapter = movementsAdapter
             }
         }
+
+        binding.bottomNavigation.setOnItemSelectedListener {
+            it.isChecked = true
+
+            when (it.itemId) {
+                R.id.nav_todos -> {
+                    if (cuenta != null){
+                        movimientos = getMovimientos(cuenta)
+                        movementsAdapter = MovementsAdapter(movimientos, this)
+                        binding.rvMovimientos.apply {
+                            layoutManager = linearLayoutManager
+                            adapter = movementsAdapter
+                        }
+                    }
+                }
+                R.id.nav_tipo_0 -> {
+                    if (cuenta != null){
+                        movimientos = getMovimientosTipo(cuenta, 0)
+                        movementsAdapter = MovementsAdapter(movimientos, this)
+                        binding.rvMovimientos.apply {
+                            layoutManager = linearLayoutManager
+                            adapter = movementsAdapter
+                        }
+                    }
+                }
+                R.id.nav_tipo_1 -> {
+                    if (cuenta != null){
+                        movimientos = getMovimientosTipo(cuenta, 1)
+                        movementsAdapter = MovementsAdapter(movimientos, this)
+                        binding.rvMovimientos.apply {
+                            layoutManager = linearLayoutManager
+                            adapter = movementsAdapter
+                        }
+                    }
+                }
+                R.id.nav_tipo_2 -> {
+                    if (cuenta != null){
+                        movimientos = getMovimientosTipo(cuenta, 2)
+                        movementsAdapter = MovementsAdapter(movimientos, this)
+                        binding.rvMovimientos.apply {
+                            layoutManager = linearLayoutManager
+                            adapter = movementsAdapter
+                        }
+                    }
+                }
+            }
+            false
+
+        }
+
         return binding.root
     }
 
     private fun getMovimientos(cuenta: Cuenta): List<Movimiento> {
         val mbo = MiBancoOperacional.getInstance(requireContext())
         return mbo?.getMovimientos(cuenta) as? ArrayList<Movimiento> ?: listOf()
+    }
+    private fun getMovimientosTipo(cuenta: Cuenta, tipo: Int): List<Movimiento> {
+        val mbo = MiBancoOperacional.getInstance(requireContext())
+        return mbo?.getMovimientosTipo(cuenta, tipo) as? ArrayList<Movimiento> ?: listOf()
     }
 
 
@@ -86,6 +142,7 @@ class AccountsMovementsFragment : Fragment(), MovementsListener {
             .show()
 
     }
+
 
 
 }

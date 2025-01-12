@@ -36,6 +36,8 @@ class GlobalPositionDetailsActivity : AppCompatActivity() {
 
 
 
+
+
         }
 
         ViewCompat.setOnApplyWindowInsetsListener(binding.root) { v, insets ->

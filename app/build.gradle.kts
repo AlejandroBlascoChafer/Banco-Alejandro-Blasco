@@ -49,7 +49,4 @@ dependencies {
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
     implementation(libs.lottie)
-    implementation(libs.androidx.appcompat)
-    implementation(libs.material)
-
 }
