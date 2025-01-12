@@ -118,10 +118,10 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         startActivity(intent)
     }
 
-//    private fun navigateToSettings() {
-//        val intent = Intent(this, SettingsActivity::class.java)
-//        startActivity(intent)
-//    }
+    private fun navigateToSettings() {
+        val intent = Intent(this, SettingsActivity::class.java)
+        startActivity(intent)
+    }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return when (item.itemId) {
@@ -146,7 +146,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             R.id.nav_atms -> {
                 // Lógica para cajeros
             }
-            //R.id.nav_sett -> navigateToSettings()
+            R.id.nav_sett -> navigateToSettings()
             R.id.nav_exit -> navigateToWelcome()
         }
         binding.drawerLayout?.closeDrawer(GravityCompat.START)

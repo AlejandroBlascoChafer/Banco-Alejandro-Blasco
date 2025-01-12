@@ -34,7 +34,19 @@
     <string name="close_nav">close\n</string>
     <string name="mi_banco">Mi banco\n</string>
     <string name="contacto_gmail_com">contacto\n</string>
-
+    <string name="idioma">Idioma\n</string>
+    <string name="multimedia">Multimedia</string>
+    <string name="musicaOff">No escuchar la música mientras se ejecuta la aplicación</string>
+    <string name="musicaOn">Escuchar la música mientras se ejecuta la aplicación.\n</string>
+    <string name="videoBienvenida">Video de bienvenida</string>
+    <string name="videoOn">Escuchar reproducir el vídeo al iniciar la aplicación</string>
+    <string name="videoOff">No escuchar reproducir el vídeo al iniciar la aplicación</string>
+    <string name="idiomaApp">Idioma de la aplicación</string>
+    <string name="seleccionaIdioma">Indica el idioma de la aplicación</string>
+    <string name="datos">Datos</string>
+    <string name="origenDatos">Origen de los datos</string>
+    <string name="seleccionaOrigen">Indica el origen de los datos</string>
+    <string name="musica">Musica\n</string>
 
     <string-array name="cuentas">
         <item> </item>
@@ -49,4 +61,26 @@
         <item>$</item>
         <item>£</item>
     </string-array>
+
+    <string-array name="idioma">
+        <item>Español</item>
+        <item>Inglés</item>
+    </string-array>
+
+    <string-array name="codigoidioma">
+        <item>es</item>
+        <item>en</item>
+    </string-array>
+
+    <string-array name="datos">
+        <item>Datos locales</item>
+        <item>Servicio Web</item>
+    </string-array>
+
+    <string-array name="datosvalues">
+        <item>locales</item>
+        <item>web</item>
+    </string-array>
+
+
 </resources>
