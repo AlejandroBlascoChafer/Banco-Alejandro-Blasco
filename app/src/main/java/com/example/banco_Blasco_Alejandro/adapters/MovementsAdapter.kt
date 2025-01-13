@@ -46,7 +46,7 @@ class MovementsAdapter(private var movimientos: List<Movimiento>, private val li
 
     fun updateData(movimientosNuevos: ArrayList<Movimiento>) {
         this.movimientos = movimientosNuevos
-        notifyDataSetChanged() // Esto actualiza la vista del RecyclerView
+        notifyDataSetChanged()
     }
 
 }

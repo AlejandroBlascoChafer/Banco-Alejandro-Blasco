@@ -5,7 +5,7 @@
     <string name="contrasenya">Insert the password</string>
     <string name="btn_salir">Exit</string>
     <string name="btn_entrar">Enter</string>
-    <string name="avatar">Icono de avatar</string>
+    <string name="avatar">Avatar Icon</string>
     <string name="bienvenida">Welcome</string>
     <string name="obligatorio">Required</string>
     <string name="bienvenido_a_mi_banco">Welcome to my bank</string>
@@ -25,5 +25,29 @@
     <string name="cantidad">Amount:</string>
     <string name="enviar_justificante">Send receipt</string>
     <string name="enviar">Send</string>
+    <string name="seleccionar_cuenta">Select the account:</string>
+    <string name="cuentas">Accounts</string>
+    <string name="cuentasPosicion">Accounts:</string>
+    <string name="ultimos_movimientos">Last movements:</string>
+    <string name="ajustes">Settings\n</string>
+    <string name="open_nav">open\\n</string>
+    <string name="close_nav">close\n</string>
+    <string name="mi_banco">My Bank\n</string>
+    <string name="contacto_gmail_com">Contact\n</string>
+    <string name="multimedia">Multimedia</string>
+    <string name="musica">Music</string>
+    <string name="musicaOn">Play music on start</string>
+    <string name="musicaOff">Do not play music on start</string>
+    <string name="videoBienvenida">Welcome video</string>
+    <string name="videoOn">Play welcome video with sound</string>
+    <string name="videoOff">Do not play welcome video with sound</string>
+    <string name="idioma">Language</string>
+    <string name="idiomaApp">App Language</string>
+    <string name="seleccionaIdioma">Select the app language</string>
+    <string name="datos">Data</string>
+    <string name="origenDatos">Data source</string>
+    <string name="seleccionaOrigen">Select the data source</string>
+
+
 
 </resources>

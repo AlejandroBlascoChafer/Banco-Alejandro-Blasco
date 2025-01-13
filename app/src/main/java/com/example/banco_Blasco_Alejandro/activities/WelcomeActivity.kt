@@ -34,15 +34,11 @@ class WelcomeActivity : AppCompatActivity() {
         }
 
 
-        val lotAnimationView = findViewById<LottieAnimationView>(R.id.ltAnimacion)
-        val boton = findViewById<MaterialButton>(R.id.btnEntrarWelcome)
-        val texto = findViewById<TextView>(R.id.tvBienvenida)
-
-        lotAnimationView.addAnimatorListener(object : AnimatorListenerAdapter() {
+            binding.ltAnimacion.addAnimatorListener(object : AnimatorListenerAdapter() {
             override fun onAnimationEnd(animation: Animator){
-                lotAnimationView.visibility = View.GONE
-                boton.visibility = View.VISIBLE
-                texto.visibility = View.VISIBLE
+                binding.ltAnimacion.visibility = View.GONE
+                binding.btnEntrarWelcome.visibility = View.VISIBLE
+                binding.tvBienvenida.visibility = View.VISIBLE
             }
         })
 
@@ -61,7 +57,7 @@ class WelcomeActivity : AppCompatActivity() {
 
 
         enableEdgeToEdge()
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
+        ViewCompat.setOnApplyWindowInsetsListener(binding.root) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets

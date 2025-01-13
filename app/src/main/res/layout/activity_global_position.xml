@@ -8,15 +8,6 @@
     android:orientation="vertical"
     tools:context=".activities.GlobalPositionActivity">
 
-    <TextView
-        android:id="@+id/tvTitulo"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:text="@string/posicion_Global"
-        android:textAlignment="center"
-        android:textSize="30sp"
-        />
 
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/frgCuentas"

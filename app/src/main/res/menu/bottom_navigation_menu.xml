@@ -1,0 +1,19 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_todos"
+        android:title="Todos"
+        android:icon="@drawable/ic_tipotodos" />
+    <item
+        android:id="@+id/nav_tipo_0"
+        android:title="Tipo 0"
+        android:icon="@drawable/ic_tipo0" />
+    <item
+        android:id="@+id/nav_tipo_1"
+        android:title="Tipo 1"
+        android:icon="@drawable/ic_tipo1" />
+    <item
+        android:id="@+id/nav_tipo_2"
+        android:title="Tipo 2"
+        android:icon="@drawable/ic_tipo2" />
+
+</menu>
