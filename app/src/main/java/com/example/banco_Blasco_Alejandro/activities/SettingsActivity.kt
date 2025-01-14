@@ -38,7 +38,7 @@ class SettingsActivity : AppCompatActivity() {
                 Preference.OnPreferenceChangeListener { _, newValue ->
                     val selectedLanguage = newValue as String
                     updateLanguage(selectedLanguage)
-                    true // Devuelve true para guardar el valor en SharedPreferences
+                    true
                 }
         }
 
@@ -49,7 +49,6 @@ class SettingsActivity : AppCompatActivity() {
             val config = resources.configuration
             config.setLocale(locale)
 
-            // Actualiza la configuración
             requireActivity().baseContext.resources.updateConfiguration(
                 config,
                 requireActivity().baseContext.resources.displayMetrics
