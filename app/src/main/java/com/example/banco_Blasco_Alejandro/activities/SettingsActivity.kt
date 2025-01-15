@@ -2,6 +2,7 @@ package com.example.banco_Blasco_Alejandro.activities
 
 import android.annotation.SuppressLint
 import android.os.Bundle
+import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
 import androidx.preference.ListPreference
 import androidx.preference.Preference
@@ -29,31 +30,21 @@ class SettingsActivity : AppCompatActivity() {
         supportActionBar?.setHomeAsUpIndicator(R.drawable.ic_salir)
     }
 
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return when (item.itemId) {
+            android.R.id.home -> {
+                // Finaliza la actividad y regresa a la anterior
+                finish()
+                true
+            }
+            else -> super.onOptionsItemSelected(item)
+        }
+    }
+
+
     class SettingsFragment : PreferenceFragmentCompat() {
         override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
             setPreferencesFromResource(R.xml.root_preferences, rootKey)
-
-            val languagePreference = findPreference<ListPreference>("codigoidioma")
-            languagePreference?.onPreferenceChangeListener =
-                Preference.OnPreferenceChangeListener { _, newValue ->
-                    val selectedLanguage = newValue as String
-                    updateLanguage(selectedLanguage)
-                    true
-                }
-        }
-
-        private fun updateLanguage(languageCode: String) {
-            val locale = Locale(languageCode)
-            Locale.setDefault(locale)
-
-            val config = resources.configuration
-            config.setLocale(locale)
-
-            requireActivity().baseContext.resources.updateConfiguration(
-                config,
-                requireActivity().baseContext.resources.displayMetrics
-            )
-            requireActivity().recreate()
         }
     }
 }
