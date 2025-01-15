@@ -47,6 +47,10 @@
     <string name="origenDatos">Origen de los datos</string>
     <string name="seleccionaOrigen">Indica el origen de los datos</string>
     <string name="musica">Música\n</string>
+    <string name="lista_de_cajeros">Lista de cajeros</string>
+    <string name="anyadir_cajeros">Añadir cajeros</string>
+    <string name="mapa_de_cajeros">Mapa de cajeros</string>
+    <string name="elige_el_cajero">Elige el cajero:</string>
 
     <string-array name="cuentas">
         <item> </item>

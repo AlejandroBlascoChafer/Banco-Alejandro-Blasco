@@ -13,7 +13,7 @@ interface CajeroDao {
     @Query("SELECT * FROM cajeros")
     fun getAllCajeros() : MutableList<CajeroEntity>
 
-    @Query("INSERT INTO cajeros")
+    @Insert
     fun insertAll(cajeroEntityList : List<CajeroEntity>)
 
     @Insert

@@ -79,6 +79,10 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             startActivity(movimientos)
         }
 
+        binding.btnCajeros.setOnClickListener{
+            val cajeros = Intent(this, AtmManagementActivity::class.java)
+            startActivity(cajeros)
+        }
 
                 enableEdgeToEdge()
 
@@ -123,6 +127,11 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         startActivity(intent)
     }
 
+    private fun navigateToAtms() {
+        val intent = Intent(this, AtmManagementActivity::class.java)
+        startActivity(intent)
+    }
+
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return when (item.itemId) {
             android.R.id.home -> {
@@ -144,7 +153,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                 // Lógica para promociones
             }
             R.id.nav_atms -> {
-                // Lógica para cajeros
+                navigateToAtms()
             }
             R.id.nav_sett -> navigateToSettings()
             R.id.nav_exit -> navigateToWelcome()
