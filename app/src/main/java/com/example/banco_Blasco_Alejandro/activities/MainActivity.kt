@@ -2,9 +2,7 @@ package com.example.banco_Blasco_Alejandro.activities
 
 import android.content.Intent
 import android.os.Bundle
-import android.view.Menu
 import android.view.MenuItem
-import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
@@ -52,36 +50,27 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         binding.idTextView.text = bienvenida
 
         binding.btnSalir.setOnClickListener{
-            val salir = Intent(this, LoginActivity::class.java)
-            startActivity(salir)
+            navigateToWelcome()
         }
 
         binding.btnCambiarContrasenya.setOnClickListener{
-            val cambiarContrasenya = Intent(this, ChangePasswordActivity::class.java)
-            cambiarContrasenya.putExtra("Cliente", cliente)
-            startActivity(cambiarContrasenya)
+            navigateToPassword(cliente)
         }
 
         binding.btnTransferencias.setOnClickListener{
-            val transferencias = Intent(this, TransfersActivity::class.java)
-            startActivity(transferencias)
+            navigateToTransfer(cliente)
         }
 
         binding.btnPosicionGlobal.setOnClickListener{
-            val posicion = Intent(this, GlobalPositionActivity::class.java)
-            posicion.putExtra("Cliente", cliente)
-            startActivity(posicion)
+            navigateToGlobalPosition(cliente)
         }
 
         binding.btnMovimientos.setOnClickListener{
-            val movimientos = Intent(this, MovementsActivity::class.java)
-            movimientos.putExtra("Cliente", cliente)
-            startActivity(movimientos)
+            navigateToMovements(cliente)
         }
 
         binding.btnCajeros.setOnClickListener{
-            val cajeros = Intent(this, AtmManagementActivity::class.java)
-            startActivity(cajeros)
+            navigateToAtms()
         }
 
                 enableEdgeToEdge()
@@ -128,14 +117,14 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     }
 
     private fun navigateToAtms() {
-        val intent = Intent(this, AtmManagementActivity::class.java)
+        val intent = Intent(this, CajeroManagementActivity::class.java)
         startActivity(intent)
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return when (item.itemId) {
             android.R.id.home -> {
-                binding.drawerLayout?.openDrawer(GravityCompat.START)
+                binding.drawerLayout.openDrawer(GravityCompat.START)
                 true
             }
             else -> super.onOptionsItemSelected(item)

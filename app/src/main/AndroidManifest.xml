@@ -14,10 +14,10 @@
         android:theme="@style/Theme.EstiloPrincipal"
         tools:targetApi="31">
         <activity
-            android:name=".activities.AtmListActivity"
+            android:name=".activities.CajeroListActivity"
             android:exported="false" />
         <activity
-            android:name=".activities.AtmManagementActivity"
+            android:name=".activities.CajeroManagementActivity"
             android:exported="false" />
         <activity
             android:name=".activities.SettingsActivity"
