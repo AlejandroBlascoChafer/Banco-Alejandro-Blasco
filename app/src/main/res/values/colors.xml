@@ -3,7 +3,7 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="morado">#AA686ED2</color>
-    <color name="grey">#AA8B8B91</color>
+    <color name="gray">#AA8B8B91</color>
     <color name="green">#54A75F</color>
     <color name="red">#CD1414</color>
 </resources>

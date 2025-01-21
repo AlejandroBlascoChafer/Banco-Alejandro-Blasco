@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <application
-        android:name=".CajeroApplication"
+        android:name=".AtmApplication"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -14,10 +14,13 @@
         android:theme="@style/Theme.EstiloPrincipal"
         tools:targetApi="31">
         <activity
-            android:name=".activities.CajeroListActivity"
+            android:name=".activities.AtmFormActivity"
             android:exported="false" />
         <activity
-            android:name=".activities.CajeroManagementActivity"
+            android:name=".activities.AtmListActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.AtmManagementActivity"
             android:exported="false" />
         <activity
             android:name=".activities.SettingsActivity"

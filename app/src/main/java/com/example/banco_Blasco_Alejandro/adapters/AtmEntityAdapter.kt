@@ -6,14 +6,14 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.banco_Blasco_Alejandro.R
 import com.example.banco_Blasco_Alejandro.databinding.ItemAtmBinding
-import com.example.banco_Blasco_Alejandro.entity.CajeroEntity
+import com.example.banco_Blasco_Alejandro.entity.AtmEntity
 
-class CajeroEntityAdapter(private val cajeros: List<CajeroEntity>, private val listener: CajeroListListener):
-    RecyclerView.Adapter<CajeroEntityAdapter.ViewHolder>() {
+class AtmEntityAdapter(private var atms: List<AtmEntity>, private val listener: AtmListListener):
+    RecyclerView.Adapter<AtmEntityAdapter.ViewHolder>() {
     inner class ViewHolder(view: View): RecyclerView.ViewHolder(view){
         val binding = ItemAtmBinding.bind(view)
 
-        fun setListener(cajeros: CajeroEntity) {
+        fun setListener(cajeros: AtmEntity) {
             binding.root.setOnClickListener{
                 listener.onClickCajero(cajeros)
             }
@@ -25,14 +25,20 @@ class CajeroEntityAdapter(private val cajeros: List<CajeroEntity>, private val l
         return ViewHolder(view)
     }
 
-    override fun getItemCount(): Int = cajeros.size
+    override fun getItemCount(): Int = atms.size
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        val cajero = cajeros.get(position)
+        val cajero = atms.get(position)
         with(holder){
             setListener(cajero)
-            binding.tvNumeroCajero.text = cajero.id.toString()
+            val texto = "Cajero ${cajero.id}"
+            binding.tvNumeroCajero.text = texto
             binding.tvDireccion.text = cajero.direccion
         }
     }
+    fun updateList(nuevaLista: List<AtmEntity>) {
+        atms = nuevaLista
+        notifyDataSetChanged()
+    }
+
 }

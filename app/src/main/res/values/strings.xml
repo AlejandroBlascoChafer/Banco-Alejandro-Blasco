@@ -51,6 +51,16 @@
     <string name="anyadir_cajeros">Añadir cajeros</string>
     <string name="mapa_de_cajeros">Mapa de cajeros</string>
     <string name="elige_el_cajero">Elige el cajero:</string>
+    <string name="direccion">Dirección</string>
+    <string name="latitud">Latitud</string>
+    <string name="longitud">Longitud</string>
+    <string name="guardar">GUARDAR</string>
+    <string name="cancelarM">CANCELAR</string>
+    <string name="borrar">Borrar</string>
+    <string name="actualizar">Actualizar</string>
+    <string name="borrar_cajero">Borrar cajero</string>
+    <string name="confirmacion_eliminar_este_cajero">¿Estás seguro de que quieres eliminar este cajero?</string>
+    <string name="gestionar_cajeros">Gestionar cajeros</string>
 
     <string-array name="cuentas">
         <item> </item>

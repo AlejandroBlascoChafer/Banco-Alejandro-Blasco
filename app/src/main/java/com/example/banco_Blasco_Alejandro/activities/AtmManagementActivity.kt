@@ -8,14 +8,14 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.banco_Blasco_Alejandro.R
-import com.example.banco_Blasco_Alejandro.databinding.ActivityCajeroManagementBinding
+import com.example.banco_Blasco_Alejandro.databinding.ActivityAtmManagementBinding
 
-class CajeroManagementActivity : AppCompatActivity() {
-    private lateinit var binding: ActivityCajeroManagementBinding
+class AtmManagementActivity : AppCompatActivity() {
+    private lateinit var binding: ActivityAtmManagementBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        binding = ActivityCajeroManagementBinding.inflate(layoutInflater)
+        binding = ActivityAtmManagementBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
 
@@ -28,7 +28,7 @@ class CajeroManagementActivity : AppCompatActivity() {
 
 
         binding.btnListaCajeros.setOnClickListener{
-            startActivity(Intent(this, CajeroListActivity::class.java))
+            startActivity(Intent(this, AtmListActivity::class.java))
         }
 
 

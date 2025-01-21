@@ -35,7 +35,6 @@ class LoginActivity : AppCompatActivity() {
             cliente.setNif(binding.etUsuario.text.toString())
             cliente.setClaveSeguridad(binding.etPassword.text.toString())
 
-
             if (binding.etUsuario.text.toString().isEmpty() || binding.etPassword.text.toString().isEmpty()) {
 
                 Toast.makeText(this, "Por favor, completa todos los campos.", Toast.LENGTH_SHORT).show()
