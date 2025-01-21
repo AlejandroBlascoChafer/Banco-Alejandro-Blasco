@@ -31,8 +31,7 @@ class CajeroEntityAdapter(private val cajeros: List<CajeroEntity>, private val l
         val cajero = cajeros.get(position)
         with(holder){
             setListener(cajero)
-            val texto = "Cajero " + position+1
-            binding.tvNumeroCajero.text = texto
+            binding.tvNumeroCajero.text = cajero.id.toString()
             binding.tvDireccion.text = cajero.direccion
         }
     }

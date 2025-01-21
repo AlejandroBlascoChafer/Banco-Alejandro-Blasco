@@ -19,6 +19,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "T3A3-Blasco-Alejandro"
+rootProject.name = "Banco-Blasco-Alejandro"
 include(":app")
  
