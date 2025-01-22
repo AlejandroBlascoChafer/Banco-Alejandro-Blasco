@@ -8,9 +8,9 @@ import java.io.Serializable
 @Entity(tableName = "atm")
 class AtmEntity (
     @PrimaryKey (autoGenerate = true) val id: Int = 0,
-    @ColumnInfo val direccion: String?,
-    @ColumnInfo val latitud: Double,
-    @ColumnInfo val longitud: Double,
+    @ColumnInfo var direccion: String?,
+    @ColumnInfo var latitud: Double,
+    @ColumnInfo var longitud: Double,
     @ColumnInfo val zoom: String?
 
 

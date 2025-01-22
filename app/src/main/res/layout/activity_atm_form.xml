@@ -47,14 +47,10 @@
             android:id="@+id/etDireccion"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Carrer del Clariano, 1111, 46021 Valencia"
-            android:focusable="false"
             android:backgroundTint="@color/gray"
-            android:textColor="@color/black"
             android:padding="8dp"
             android:layout_marginBottom="16dp" />
 
-        <!-- Campo de Latitud -->
         <TextView
             android:id="@+id/tvLatitud"
             android:layout_width="wrap_content"
@@ -67,12 +63,10 @@
             android:id="@+id/etLatitud"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="39.476"
             android:inputType="numberDecimal"
             android:padding="8dp"
             android:layout_marginBottom="16dp" />
 
-        <!-- Campo de Longitud -->
         <TextView
             android:id="@+id/tvLongitud"
             android:layout_width="wrap_content"
@@ -85,12 +79,10 @@
             android:id="@+id/etLongitud"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="-0.352448"
             android:inputType="numberDecimal"
             android:padding="8dp"
             android:layout_marginBottom="24dp" />
 
-        <!-- Botones -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

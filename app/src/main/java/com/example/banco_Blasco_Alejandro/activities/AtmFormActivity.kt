@@ -38,10 +38,42 @@ class AtmFormActivity : AppCompatActivity() {
         supportActionBar?.setDisplayShowTitleEnabled(true)
 
 
-        atm = intent.getSerializableExtra("Atm") as AtmEntity
-        binding.etDireccion.hint = atm.direccion
-        binding.etLatitud.hint = atm.latitud.toString()
-        binding.etLongitud.hint = atm.longitud.toString()
+
+        if (intent.hasExtra("Añadir")) {
+            binding.btnGuardar.setOnClickListener{
+                if (binding.etDireccion.hint?.toString().isNullOrEmpty() &&
+                    binding.etLatitud.hint?.toString().isNullOrEmpty() &&
+                    binding.etLongitud.hint?.toString().isNullOrEmpty()) {
+                        if (binding.etDireccion.text.toString().isEmpty() ||
+                            binding.etLatitud.text.toString().isEmpty() ||
+                            binding.etLongitud.text.toString().isEmpty()) {
+                            Toast.makeText(this, "Por favor, completa todos los campos", Toast.LENGTH_LONG).show()
+                        } else {
+                            addAtm()
+                        }
+                    }
+            }
+        } else {
+            atm = intent.getSerializableExtra("Atm") as AtmEntity
+            binding.etDireccion.hint = atm.direccion
+            binding.etLatitud.hint = atm.latitud.toString()
+            binding.etLongitud.hint = atm.longitud.toString()
+
+            binding.btnGuardar.setOnClickListener {
+
+
+
+                updateAtm(atm)
+            }
+        }
+
+        binding.btnCancelar.setOnClickListener {
+            finish()
+        }
+
+
+
+
 
 
 
@@ -53,12 +85,57 @@ class AtmFormActivity : AppCompatActivity() {
         }
     }
 
+    private fun updateAtm(atm: AtmEntity){
+
+        if (binding.etDireccion.text.isNullOrEmpty()){
+            atm.direccion = binding.etDireccion.hint.toString()
+        } else {
+            atm.direccion = binding.etDireccion.text.toString()
+        }
+
+        if (binding.etLatitud.text.isNullOrEmpty()) {
+            atm.latitud = binding.etLatitud.hint.toString().toDouble()
+        } else {
+            atm.latitud = binding.etLatitud.text.toString().toDouble()
+        }
+
+        if (binding.etLongitud.text.isNullOrEmpty()) {
+            atm.longitud = binding.etLongitud.hint.toString().toDouble()
+        } else {
+            atm.longitud = binding.etLongitud.text.toString().toDouble()
+        }
+
+        GlobalScope.launch(Dispatchers.Main) {
+            withContext(Dispatchers.IO) {
+                AtmApplication.database.atmDao().updateAtm(atm)
+            }
+        }
+        startActivity(Intent(this, AtmManagementActivity::class.java))
+        finish()
+
+    }
+    private fun addAtm(){
+        val newAtm = AtmEntity(
+            direccion = binding.etDireccion.text.toString(),
+            latitud = binding.etLatitud.text.toString().toDouble(),
+            longitud = binding.etLongitud.text.toString().toDouble(),
+            zoom = ""
+        )
+
+        GlobalScope.launch(Dispatchers.Main) {
+            withContext(Dispatchers.IO) {
+                AtmApplication.database.atmDao().addAtm(newAtm)
+            }
+        }
+        startActivity(Intent(this, AtmManagementActivity::class.java))
+        finish()
+    }
+
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         menuInflater.inflate(R.menu.gestion_atm_menu, menu)
         return true
     }
 
-    // Manejar las acciones del menú
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return when (item.itemId) {
             R.id.nav_borrar -> {

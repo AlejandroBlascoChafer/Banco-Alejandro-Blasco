@@ -36,9 +36,5 @@ class AtmEntityAdapter(private var atms: List<AtmEntity>, private val listener: 
             binding.tvDireccion.text = cajero.direccion
         }
     }
-    fun updateList(nuevaLista: List<AtmEntity>) {
-        atms = nuevaLista
-        notifyDataSetChanged()
-    }
 
 }

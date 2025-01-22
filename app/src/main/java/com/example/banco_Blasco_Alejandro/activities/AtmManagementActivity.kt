@@ -31,6 +31,10 @@ class AtmManagementActivity : AppCompatActivity() {
             startActivity(Intent(this, AtmListActivity::class.java))
         }
 
+        binding.btnAnyadirCajeros.setOnClickListener{
+            startActivity(Intent(this, AtmFormActivity::class.java).putExtra("Añadir", true))
+        }
+
 
         enableEdgeToEdge()
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
